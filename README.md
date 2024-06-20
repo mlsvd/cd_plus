@@ -57,12 +57,12 @@ A list of bookmarks will be displayed. If `dialog` lib is installed in the syste
 The bookmarks file ($HOME/.cd_plus_bookmarks) can be modified manually by the user to add, remove, or edit bookmarks directly.
 
 # Dependencies
-`dialog` (optinaol): Used for interactive menu (install with sudo apt-get install dialog on Debian-based systems).
+`dialog` (optional): Used for interactive menu (install with sudo apt-get install dialog on Debian-based systems).
 
 If dialog is not available, bookmarks are listed using the select command.
 
 Each bookmark is stored in $HOME/.cd_plus_bookmarks in the format <shortcut>|<directory>.
 
 # License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
 
