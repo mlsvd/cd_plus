@@ -21,7 +21,7 @@ nano ~/.bashrc
 ```
 - Add the following line at the end of the file:
 ```bash
-alias cd+='/path/to/cd_plus.sh'
+alias cd+='source /path/to/cd_plus.sh'
 ```
 - Save and close the file. Then, reload the shell configuration:
 ```bash
@@ -36,7 +36,7 @@ Navigate into directory, which needs to be bookmarked and execute cd_plus script
 cd /home/user/custom-directory
 cd+ save "custom-shortcut"
 ```
-of in case when alias is not configured:
+or in case when alias is not configured:
 ```bash
 cd /home/user/custom-directory
 ./path/to/cd_plus.sh save "custom-shortcut"
@@ -47,7 +47,7 @@ Simply run the script without any arguments to select and navigate to a bookmark
 ```bash
 cd+
 ```
-of in case when alias is not configured:
+or in case when alias is not configured:
 ```bash
 ./path/to/cd_plus.sh
 ```
@@ -57,11 +57,14 @@ A list of bookmarks will be displayed. If `dialog` lib is installed in the syste
 The bookmarks file ($HOME/.cd_plus_bookmarks) can be modified manually by the user to add, remove, or edit bookmarks directly.
 
 # Dependencies
-`dialog` (optional): Used for interactive menu (install with sudo apt-get install dialog on Debian-based systems).
+`dialog` (optional): Used for interactive menu. Install with:
+```bash
+sudo apt-get install dialog
+```
 
-If dialog is not available, bookmarks are listed using the select command.
+If `dialog` is not available, bookmarks are listed using the `select` command.
 
-Each bookmark is stored in $HOME/.cd_plus_bookmarks in the format <shortcut>|<directory>.
+Each bookmark is stored in `$HOME/.cd_plus_bookmarks` in the format `<shortcut>|<directory>`.
 
 # License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
